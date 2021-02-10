@@ -5,16 +5,20 @@
 //  Created by Maxence Mottard on 02/02/2021.
 //
 
-import Foundation
+import SwiftUI
 import SocketIO
 
-class SocketService: Weakable {
-    private let url = URL(string: "\(PlistFiles.serverUrl)/test")!
+class SocketService: ObservableObject, Weakable {
+    private let url = URL(string: PlistFiles.serverUrl)!
     private let manager: SocketManager
     private let client: SocketIOClient
-    private var socketId: String = ""
+    private var socketId: String? {
+        didSet {
+            objectWillChange.send()
+        }
+    }
     var isConnected: Bool {
-        return !socketId.isEmpty
+        client.status.active
     }
 
     static let shared = SocketService()
@@ -34,6 +38,11 @@ class SocketService: Weakable {
     
     func connect() {
         client.connect()
+    }
+    
+    func disconnect() {
+        socketId = nil
+        client.disconnect()
     }
     
     func emit(event: EmitEvent) {

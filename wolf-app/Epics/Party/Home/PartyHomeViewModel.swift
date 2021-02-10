@@ -18,15 +18,7 @@ class PartyHomeViewModel: ViewModel {
 
     func sendNewPlayerEvent() {
         let params = PartyIdParameter(id: partyId)
-
-        if socketService.isConnected {
-            socketService.emit(event: .partyPlayerNew(params: params))
-        } else {
-            socketService.connect()
-            socketService.subscribe(event: .userId, callback: weakify { (strongSelf, _: UserIdData) in
-                strongSelf.socketService.emit(event: .partyPlayerNew(params: params))
-            })
-        }
+        socketService.emit(event: .partyPlayerNew(params: params))
     }
 
     func subscribeToEvents() {
@@ -35,8 +27,9 @@ class PartyHomeViewModel: ViewModel {
             strongSelf.party = data
         })
 
-        socketService.subscribe(event: .partyRefused) { (_: PartyIdData) in
+        socketService.subscribe(event: .partyRefused, callback: weakify { (strongSelf, _: PartyIdData) in
+            strongSelf.handleError(error: ViewError(errorCode: "GAME_REFUSED"))
             ViewProvider.shared.setEntrypoint(.home)
-        }
+        })
     }
 }

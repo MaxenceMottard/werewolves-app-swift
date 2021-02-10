@@ -17,6 +17,8 @@
 		D0212EB125D3ACB8006528D5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0212EB325D3ACB8006528D5 /* Localizable.strings */; };
 		D0212EC025D3B1C8006528D5 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = D0212EBF25D3B1C8006528D5 /* config.plist */; };
 		D0212EC525D3B316006528D5 /* Generated+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0212EC425D3B316006528D5 /* Generated+Strings.swift */; };
+		D021BD0A25D48E6300589AFD /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021BD0925D48E6300589AFD /* ErrorHandler.swift */; };
+		D021BD0F25D48F7700589AFD /* ErrorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021BD0E25D48F7700589AFD /* ErrorProvider.swift */; };
 		D05B15BB25D312EF001BA8F3 /* JoinPartyParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05B15BA25D312EF001BA8F3 /* JoinPartyParameter.swift */; };
 		D05B15C425D3144A001BA8F3 /* SocketParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05B15C325D3144A001BA8F3 /* SocketParameter.swift */; };
 		D06963C525D3195A00D0FBF1 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06963C425D3195A00D0FBF1 /* ViewModel.swift */; };
@@ -65,6 +67,8 @@
 		D0212EBF25D3B1C8006528D5 /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		D0212EC425D3B316006528D5 /* Generated+Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Generated+Strings.swift"; sourceTree = "<group>"; };
 		D021BD0525D465F200589AFD /* wolf-app.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "wolf-app.entitlements"; sourceTree = "<group>"; };
+		D021BD0925D48E6300589AFD /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		D021BD0E25D48F7700589AFD /* ErrorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorProvider.swift; sourceTree = "<group>"; };
 		D05B15BA25D312EF001BA8F3 /* JoinPartyParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinPartyParameter.swift; sourceTree = "<group>"; };
 		D05B15C325D3144A001BA8F3 /* SocketParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketParameter.swift; sourceTree = "<group>"; };
 		D06963C425D3195A00D0FBF1 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -149,6 +153,23 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
+		D021BD0825D48E2400589AFD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D021BD0925D48E6300589AFD /* ErrorHandler.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D021BD0D25D48F5800589AFD /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				D06963EE25D3227500D0FBF1 /* ViewProvider.swift */,
+				D021BD0E25D48F7700589AFD /* ErrorProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
 		D05B15B825D312D7001BA8F3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,9 +194,11 @@
 		D05B15C125D3141C001BA8F3 /* Additions */ = {
 			isa = PBXGroup;
 			children = (
-				D06963D425D31A0A00D0FBF1 /* Models */,
+				D021BD0D25D48F5800589AFD /* Providers */,
+				D021BD0825D48E2400589AFD /* Components */,
 				D06963CD25D319B800D0FBF1 /* Extensions */,
 				D05B15C225D31423001BA8F3 /* Extendables */,
+				D06963D425D31A0A00D0FBF1 /* Models */,
 				D06963D125D319E000D0FBF1 /* AnyEncodable.swift */,
 			);
 			path = Additions;
@@ -254,7 +277,6 @@
 		D06963E925D3220100D0FBF1 /* DI */ = {
 			isa = PBXGroup;
 			children = (
-				D06963EE25D3227500D0FBF1 /* ViewProvider.swift */,
 				D06963F125D3229100D0FBF1 /* HelperAssembly.swift */,
 			);
 			path = DI;
@@ -476,6 +498,7 @@
 				D0212E9525D34CF6006528D5 /* PartyIdParameter.swift in Sources */,
 				D0212E9125D346FB006528D5 /* ViewProvider+Party.swift in Sources */,
 				D0EB5F4625D3BAA300B072D0 /* PartyLobbyViewModel.swift in Sources */,
+				D021BD0F25D48F7700589AFD /* ErrorProvider.swift in Sources */,
 				D0EB5F4D25D3BB7B00B072D0 /* PartyLobbyAssembly.swift in Sources */,
 				D0EA8B2125C9EC75003AB18F /* HomeView.swift in Sources */,
 				D06963CF25D319C500D0FBF1 /* AnyPublisher+Extensions.swift in Sources */,
@@ -498,6 +521,7 @@
 				D06963C525D3195A00D0FBF1 /* ViewModel.swift in Sources */,
 				D069640325D32CE100D0FBF1 /* PartyIdData.swift in Sources */,
 				D0212E8B25D346CE006528D5 /* PartyHomeView.swift in Sources */,
+				D021BD0A25D48E6300589AFD /* ErrorHandler.swift in Sources */,
 				D07AF91725D3423100CA46CB /* View+DismissKeyboard.swift in Sources */,
 				D06963F225D3229100D0FBF1 /* HelperAssembly.swift in Sources */,
 			);

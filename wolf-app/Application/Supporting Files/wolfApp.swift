@@ -10,19 +10,33 @@ import SwiftUI
 @main
 struct wolfApp: App {
     @ObservedObject var viewProvider = ViewProvider.shared
+    @ObservedObject var socketService = SocketService.shared
 
     var body: some Scene {
         WindowGroup {
-            Group {
-                switch viewProvider.entrypoint {
-                case .party(let partyId):
-                    ViewProvider.Party.home(id: partyId)
-                case .joinParty:
-                    ViewProvider.joinParty()
-                default:
-                    ViewProvider.home()
+            if !socketService.isConnected{
+                ProgressView()
+                    .onAppear(perform: {
+                        socketService.connect()
+                    })
+            } else {
+                ErrorHandler {
+                    Group {
+                        switch viewProvider.entrypoint {
+                        case .party(let partyId):
+                            ViewProvider.Party.home(id: partyId)
+                        case .joinParty:
+                            ViewProvider.joinParty()
+                        default:
+                            ViewProvider.home()
+                        }
+                    }
                 }
-            }.onOpenURL(perform: handleOnOpenURL(url:))
+                .onOpenURL(perform: handleOnOpenURL(url:))
+                .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+                    socketService.disconnect()
+                }
+            }
         }
     }
     

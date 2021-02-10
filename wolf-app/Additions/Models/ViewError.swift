@@ -8,6 +8,10 @@
 import Foundation
 
 
-struct ViewError: Error {
-    
+struct ViewError: Error, Identifiable {
+    let errorCode: String
+    var id: String { errorCode }
+
+    var title: String {  NSLocalizedString("error.alert.\(errorCode).title", comment: "") }
+    var description: String {  NSLocalizedString("error.alert.\(errorCode).description", comment: "") }
 }

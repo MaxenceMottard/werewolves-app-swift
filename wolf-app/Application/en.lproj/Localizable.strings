@@ -20,3 +20,9 @@
 /**    PARTY LOBBY    */
 "party.lobby.button.startParty" = "Start party";
 
+
+
+/**    ERROR ALERT    */
+"error.alert.button.cancel" = "Cancel";
+"error.alert.GAME_REFUSED.title" = "Party not found";
+"error.alert.GAME_REFUSED.description" = "The party you were looking for cannot be found. Please try again";

@@ -26,7 +26,6 @@ struct HomeView: View {
         .background(Color.black)
         .onAppear(perform: {
             viewModel.subscribeToEvents()
-            viewModel.connectSocket()
         })
         .onTapGesture {
           self.hideKeyboard()

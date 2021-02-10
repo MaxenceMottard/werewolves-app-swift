@@ -20,3 +20,10 @@
 /**    PARTY LOBBY    */
 "party.lobby.button.startParty" = "Démarrer la partie";
 
+
+
+/**    ERROR ALERT    */
+"error.alert.button.cancel" = "Cancel";
+"error.alert.GAME_REFUSED.title" = "Partie introuvable";
+"error.alert.GAME_REFUSED.description" = "La partie que vous avez recherchée est introuvable. Veuillez réessayer.";
+

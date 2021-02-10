@@ -20,10 +20,6 @@ class HomeViewModel: ViewModel {
         }
     }
 
-    func connectSocket() {
-        socketService.connect()
-    }
-
     func handleCreateParty() {
         let params = CreatePartyParameter(username: usernameInput)
         socketService.emit(event: .partyCreate(params: params))

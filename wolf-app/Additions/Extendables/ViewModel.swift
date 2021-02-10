@@ -30,7 +30,8 @@ open class ViewModel: ObservableObject, Weakable {
 
                     executeOnError(error)
                 case .failure(_):
-                    strongSelf.handleError(error: ViewError())
+//                    strongSelf.handleError(error: ViewError())
+                    return
                 }
             }, receiveValue: { value in
                 onSuccess(value)
@@ -51,7 +52,8 @@ open class ViewModel: ObservableObject, Weakable {
 
                     executeOnError(error)
                 case .failure(_):
-                    strongSelf.handleError(error: ViewError())
+//                    strongSelf.handleError(error: ViewError())
+                    return
                 }
             }, receiveValue: {
                 onSuccess()
@@ -59,11 +61,7 @@ open class ViewModel: ObservableObject, Weakable {
     }
 
     func handleError(error: ViewError) {
-        self.error = error
-    }
-
-    func closeErrorAlert() {
-        error = nil
+        ErrorProvider.shared.handleError(error)
     }
     
     struct ExecuteServiceSetup<T: WebService> {
