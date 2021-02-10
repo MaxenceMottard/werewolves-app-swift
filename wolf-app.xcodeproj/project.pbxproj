@@ -13,6 +13,8 @@
 		D0212E9125D346FB006528D5 /* ViewProvider+Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0212E9025D346FB006528D5 /* ViewProvider+Party.swift */; };
 		D0212E9525D34CF6006528D5 /* PartyIdParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0212E9425D34CF6006528D5 /* PartyIdParameter.swift */; };
 		D0212E9825D34DFD006528D5 /* PartyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0212E9725D34DFD006528D5 /* PartyData.swift */; };
+		D0212E9F25D3AA46006528D5 /* Generated+Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0212E9E25D3AA46006528D5 /* Generated+Plist.swift */; };
+		D0212EC025D3B1C8006528D5 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = D0212EBF25D3B1C8006528D5 /* config.plist */; };
 		D05B15BB25D312EF001BA8F3 /* JoinPartyParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05B15BA25D312EF001BA8F3 /* JoinPartyParameter.swift */; };
 		D05B15C425D3144A001BA8F3 /* SocketParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05B15C325D3144A001BA8F3 /* SocketParameter.swift */; };
 		D06963C525D3195A00D0FBF1 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06963C425D3195A00D0FBF1 /* ViewModel.swift */; };
@@ -50,6 +52,8 @@
 		D0212E9025D346FB006528D5 /* ViewProvider+Party.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewProvider+Party.swift"; sourceTree = "<group>"; };
 		D0212E9425D34CF6006528D5 /* PartyIdParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyIdParameter.swift; sourceTree = "<group>"; };
 		D0212E9725D34DFD006528D5 /* PartyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyData.swift; sourceTree = "<group>"; };
+		D0212E9E25D3AA46006528D5 /* Generated+Plist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Generated+Plist.swift"; sourceTree = "<group>"; };
+		D0212EBF25D3B1C8006528D5 /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		D05B15BA25D312EF001BA8F3 /* JoinPartyParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinPartyParameter.swift; sourceTree = "<group>"; };
 		D05B15C325D3144A001BA8F3 /* SocketParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketParameter.swift; sourceTree = "<group>"; };
 		D06963C425D3195A00D0FBF1 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -112,6 +116,14 @@
 			path = "#Navigation";
 			sourceTree = "<group>";
 		};
+		D0212E9A25D3A7C8006528D5 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				D0212E9E25D3AA46006528D5 /* Generated+Plist.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 		D05B15B825D312D7001BA8F3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +179,7 @@
 		D06963BC25D3186600D0FBF1 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				D0212E9A25D3A7C8006528D5 /* Generated */,
 				D06963E925D3220100D0FBF1 /* DI */,
 				D06963DC25D321A300D0FBF1 /* Supporting Files */,
 			);
@@ -201,6 +214,7 @@
 		D06963DC25D321A300D0FBF1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D0212EBF25D3B1C8006528D5 /* config.plist */,
 				D0EA8B2725C9EC79003AB18F /* Info.plist */,
 				D0EA8B1E25C9EC75003AB18F /* wolfApp.swift */,
 				D0EA8B2225C9EC79003AB18F /* Assets.xcassets */,
@@ -299,6 +313,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0EA8B2A25C9EC79003AB18F /* Build configuration list for PBXNativeTarget "wolf-app" */;
 			buildPhases = (
+				D0212EBB25D3B049006528D5 /* SwiftGen */,
 				D0EA8B1725C9EC75003AB18F /* Sources */,
 				D0EA8B1825C9EC75003AB18F /* Frameworks */,
 				D0EA8B1925C9EC75003AB18F /* Resources */,
@@ -361,10 +376,32 @@
 			files = (
 				D0EA8B2625C9EC79003AB18F /* Preview Assets.xcassets in Resources */,
 				D0EA8B2325C9EC79003AB18F /* Assets.xcassets in Resources */,
+				D0212EC025D3B1C8006528D5 /* config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D0212EBB25D3B049006528D5 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftgen >/dev/null; then\n  swiftgen\nelse\n  echo \"warning: SwiftGen not installed, download it from https://github.com/SwiftGen/SwiftGen\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D0EA8B1725C9EC75003AB18F /* Sources */ = {
@@ -383,6 +420,7 @@
 				D0212E9125D346FB006528D5 /* ViewProvider+Party.swift in Sources */,
 				D0EA8B2125C9EC75003AB18F /* HomeView.swift in Sources */,
 				D06963CF25D319C500D0FBF1 /* AnyPublisher+Extensions.swift in Sources */,
+				D0212E9F25D3AA46006528D5 /* Generated+Plist.swift in Sources */,
 				D07AF90C25D340B900CA46CB /* JoinPartyAssembly.swift in Sources */,
 				D06963D225D319E000D0FBF1 /* AnyEncodable.swift in Sources */,
 				D06963D625D31A1600D0FBF1 /* ViewError.swift in Sources */,

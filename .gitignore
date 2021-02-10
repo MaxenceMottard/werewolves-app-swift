@@ -144,3 +144,11 @@ xcuserdata
 
 
 # End of https://www.toptal.com/developers/gitignore/api/swift,swiftpackagemanager,swiftpm,macos,fastlane
+
+
+#### Config ####
+wolf-app/config.plist
+
+wolf-app/Application/Generated/*
+!wolf-app/Application/Generated/.gitkeep
+wolf-app/Application/Supporting Files/config.plist

@@ -1,0 +1,9 @@
+input_dir: wolf-app/
+output_dir: wolf-app/Application/Generated/
+
+plist:
+  inputs: Application/Supporting Files/config.plist
+  outputs:
+    templateName: runtime-swift5
+    output: Generated+Plist.swift
+

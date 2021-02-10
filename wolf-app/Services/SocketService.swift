@@ -9,7 +9,7 @@ import Foundation
 import SocketIO
 
 class SocketService {
-    private let url = URL(string: "http://192.168.1.17:9999/")!
+    private let url = URL(string: PlistFiles.serverUrl)!
     private let manager: SocketManager
     private let client: SocketIOClient
 
