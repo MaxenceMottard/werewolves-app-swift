@@ -1,5 +1,5 @@
 //
-//  wolf_appApp.swift
+//  wolfApp.swift
 //  wolf-app
 //
 //  Created by Maxence Mottard on 02/02/2021.
@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct wolf_appApp: App {
+struct wolfApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ViewProvider.home()
         }
     }
 }

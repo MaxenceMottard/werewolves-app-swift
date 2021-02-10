@@ -3,23 +3,80 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D0EA8B1F25C9EC75003AB18F /* wolf_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA8B1E25C9EC75003AB18F /* wolf_appApp.swift */; };
-		D0EA8B2125C9EC75003AB18F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA8B2025C9EC75003AB18F /* ContentView.swift */; };
+		D0212E8725D346BB006528D5 /* PartyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0212E8625D346BB006528D5 /* PartyViewModel.swift */; };
+		D0212E8B25D346CE006528D5 /* PartyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0212E8A25D346CE006528D5 /* PartyView.swift */; };
+		D0212E8E25D346EC006528D5 /* PartyAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0212E8D25D346EC006528D5 /* PartyAssembly.swift */; };
+		D0212E9125D346FB006528D5 /* ViewProvider+Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0212E9025D346FB006528D5 /* ViewProvider+Party.swift */; };
+		D0212E9525D34CF6006528D5 /* PartyIdParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0212E9425D34CF6006528D5 /* PartyIdParameter.swift */; };
+		D0212E9825D34DFD006528D5 /* PartyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0212E9725D34DFD006528D5 /* PartyData.swift */; };
+		D05B15BB25D312EF001BA8F3 /* JoinPartyParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05B15BA25D312EF001BA8F3 /* JoinPartyParameter.swift */; };
+		D05B15C425D3144A001BA8F3 /* SocketParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05B15C325D3144A001BA8F3 /* SocketParameter.swift */; };
+		D06963C525D3195A00D0FBF1 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06963C425D3195A00D0FBF1 /* ViewModel.swift */; };
+		D06963C825D3198700D0FBF1 /* Weakable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06963C725D3198700D0FBF1 /* Weakable.swift */; };
+		D06963CB25D319A000D0FBF1 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06963CA25D319A000D0FBF1 /* WebService.swift */; };
+		D06963CF25D319C500D0FBF1 /* AnyPublisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06963CE25D319C500D0FBF1 /* AnyPublisher+Extensions.swift */; };
+		D06963D225D319E000D0FBF1 /* AnyEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06963D125D319E000D0FBF1 /* AnyEncodable.swift */; };
+		D06963D625D31A1600D0FBF1 /* ViewError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06963D525D31A1600D0FBF1 /* ViewError.swift */; };
+		D06963D925D31BA100D0FBF1 /* CreatePartyParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06963D825D31BA100D0FBF1 /* CreatePartyParameter.swift */; };
+		D06963EC25D3224300D0FBF1 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D06963EB25D3224300D0FBF1 /* Swinject */; };
+		D06963EF25D3227500D0FBF1 /* ViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06963EE25D3227500D0FBF1 /* ViewProvider.swift */; };
+		D06963F225D3229100D0FBF1 /* HelperAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06963F125D3229100D0FBF1 /* HelperAssembly.swift */; };
+		D06963F625D322C900D0FBF1 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = D06963F525D322C900D0FBF1 /* SwinjectAutoregistration */; };
+		D06963FC25D323A300D0FBF1 /* HomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06963FB25D323A300D0FBF1 /* HomeAssembly.swift */; };
+		D06963FF25D3247E00D0FBF1 /* ViewProvider+Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06963FE25D3247E00D0FBF1 /* ViewProvider+Home.swift */; };
+		D069640325D32CE100D0FBF1 /* PartyIdData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D069640225D32CE100D0FBF1 /* PartyIdData.swift */; };
+		D07AF90825D340A000CA46CB /* JoinPartyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07AF90725D340A000CA46CB /* JoinPartyViewModel.swift */; };
+		D07AF90C25D340B900CA46CB /* JoinPartyAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07AF90B25D340B800CA46CB /* JoinPartyAssembly.swift */; };
+		D07AF91025D340DB00CA46CB /* ViewProvider+JoinParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07AF90F25D340DB00CA46CB /* ViewProvider+JoinParty.swift */; };
+		D07AF91425D3410E00CA46CB /* JoinPartyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07AF91325D3410E00CA46CB /* JoinPartyView.swift */; };
+		D07AF91725D3423100CA46CB /* View+DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07AF91625D3423100CA46CB /* View+DismissKeyboard.swift */; };
+		D0EA8B1F25C9EC75003AB18F /* wolfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA8B1E25C9EC75003AB18F /* wolfApp.swift */; };
+		D0EA8B2125C9EC75003AB18F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA8B2025C9EC75003AB18F /* HomeView.swift */; };
 		D0EA8B2325C9EC79003AB18F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0EA8B2225C9EC79003AB18F /* Assets.xcassets */; };
 		D0EA8B2625C9EC79003AB18F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0EA8B2525C9EC79003AB18F /* Preview Assets.xcassets */; };
+		D0EA8B2F25C9EC9A003AB18F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA8B2E25C9EC9A003AB18F /* HomeViewModel.swift */; };
+		D0EA8B3325C9ED42003AB18F /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = D0EA8B3225C9ED42003AB18F /* SocketIO */; };
+		D0EA8B3925CA09C7003AB18F /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA8B3825CA09C7003AB18F /* SocketService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D0212E8625D346BB006528D5 /* PartyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyViewModel.swift; sourceTree = "<group>"; };
+		D0212E8A25D346CE006528D5 /* PartyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyView.swift; sourceTree = "<group>"; };
+		D0212E8D25D346EC006528D5 /* PartyAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyAssembly.swift; sourceTree = "<group>"; };
+		D0212E9025D346FB006528D5 /* ViewProvider+Party.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewProvider+Party.swift"; sourceTree = "<group>"; };
+		D0212E9425D34CF6006528D5 /* PartyIdParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyIdParameter.swift; sourceTree = "<group>"; };
+		D0212E9725D34DFD006528D5 /* PartyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyData.swift; sourceTree = "<group>"; };
+		D05B15BA25D312EF001BA8F3 /* JoinPartyParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinPartyParameter.swift; sourceTree = "<group>"; };
+		D05B15C325D3144A001BA8F3 /* SocketParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketParameter.swift; sourceTree = "<group>"; };
+		D06963C425D3195A00D0FBF1 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		D06963C725D3198700D0FBF1 /* Weakable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weakable.swift; sourceTree = "<group>"; };
+		D06963CA25D319A000D0FBF1 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		D06963CE25D319C500D0FBF1 /* AnyPublisher+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyPublisher+Extensions.swift"; sourceTree = "<group>"; };
+		D06963D125D319E000D0FBF1 /* AnyEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyEncodable.swift; sourceTree = "<group>"; };
+		D06963D525D31A1600D0FBF1 /* ViewError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewError.swift; sourceTree = "<group>"; };
+		D06963D825D31BA100D0FBF1 /* CreatePartyParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePartyParameter.swift; sourceTree = "<group>"; };
+		D06963EE25D3227500D0FBF1 /* ViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProvider.swift; sourceTree = "<group>"; };
+		D06963F125D3229100D0FBF1 /* HelperAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperAssembly.swift; sourceTree = "<group>"; };
+		D06963FB25D323A300D0FBF1 /* HomeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembly.swift; sourceTree = "<group>"; };
+		D06963FE25D3247E00D0FBF1 /* ViewProvider+Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewProvider+Home.swift"; sourceTree = "<group>"; };
+		D069640225D32CE100D0FBF1 /* PartyIdData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyIdData.swift; sourceTree = "<group>"; };
+		D07AF90725D340A000CA46CB /* JoinPartyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinPartyViewModel.swift; sourceTree = "<group>"; };
+		D07AF90B25D340B800CA46CB /* JoinPartyAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinPartyAssembly.swift; sourceTree = "<group>"; };
+		D07AF90F25D340DB00CA46CB /* ViewProvider+JoinParty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewProvider+JoinParty.swift"; sourceTree = "<group>"; };
+		D07AF91325D3410E00CA46CB /* JoinPartyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinPartyView.swift; sourceTree = "<group>"; };
+		D07AF91625D3423100CA46CB /* View+DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+DismissKeyboard.swift"; sourceTree = "<group>"; };
 		D0EA8B1B25C9EC75003AB18F /* wolf-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wolf-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0EA8B1E25C9EC75003AB18F /* wolf_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wolf_appApp.swift; sourceTree = "<group>"; };
-		D0EA8B2025C9EC75003AB18F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D0EA8B1E25C9EC75003AB18F /* wolfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wolfApp.swift; sourceTree = "<group>"; };
+		D0EA8B2025C9EC75003AB18F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D0EA8B2225C9EC79003AB18F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0EA8B2525C9EC79003AB18F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D0EA8B2725C9EC79003AB18F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0EA8B2E25C9EC9A003AB18F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		D0EA8B3825CA09C7003AB18F /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,12 +84,178 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0EA8B3325C9ED42003AB18F /* SocketIO in Frameworks */,
+				D06963EC25D3224300D0FBF1 /* Swinject in Frameworks */,
+				D06963F625D322C900D0FBF1 /* SwinjectAutoregistration in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D0212E8025D34681006528D5 /* Party */ = {
+			isa = PBXGroup;
+			children = (
+				D0212E8125D346A3006528D5 /* #Navigation */,
+				D0212E8625D346BB006528D5 /* PartyViewModel.swift */,
+				D0212E8A25D346CE006528D5 /* PartyView.swift */,
+			);
+			path = Party;
+			sourceTree = "<group>";
+		};
+		D0212E8125D346A3006528D5 /* #Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				D0212E8D25D346EC006528D5 /* PartyAssembly.swift */,
+				D0212E9025D346FB006528D5 /* ViewProvider+Party.swift */,
+			);
+			path = "#Navigation";
+			sourceTree = "<group>";
+		};
+		D05B15B825D312D7001BA8F3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D05B15B925D312DE001BA8F3 /* Socket */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D05B15B925D312DE001BA8F3 /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				D05B15BA25D312EF001BA8F3 /* JoinPartyParameter.swift */,
+				D06963D825D31BA100D0FBF1 /* CreatePartyParameter.swift */,
+				D069640225D32CE100D0FBF1 /* PartyIdData.swift */,
+				D0212E9425D34CF6006528D5 /* PartyIdParameter.swift */,
+				D0212E9725D34DFD006528D5 /* PartyData.swift */,
+			);
+			path = Socket;
+			sourceTree = "<group>";
+		};
+		D05B15C125D3141C001BA8F3 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				D06963D425D31A0A00D0FBF1 /* Models */,
+				D06963CD25D319B800D0FBF1 /* Extensions */,
+				D05B15C225D31423001BA8F3 /* Extendables */,
+				D06963D125D319E000D0FBF1 /* AnyEncodable.swift */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		D05B15C225D31423001BA8F3 /* Extendables */ = {
+			isa = PBXGroup;
+			children = (
+				D05B15C325D3144A001BA8F3 /* SocketParameter.swift */,
+				D06963C425D3195A00D0FBF1 /* ViewModel.swift */,
+				D06963C725D3198700D0FBF1 /* Weakable.swift */,
+				D06963CA25D319A000D0FBF1 /* WebService.swift */,
+			);
+			path = Extendables;
+			sourceTree = "<group>";
+		};
+		D05B15C625D31624001BA8F3 /* Epics */ = {
+			isa = PBXGroup;
+			children = (
+				D0212E8025D34681006528D5 /* Party */,
+				D07AF90325D3408500CA46CB /* JoinParty */,
+				D06963F925D3236800D0FBF1 /* Home */,
+			);
+			path = Epics;
+			sourceTree = "<group>";
+		};
+		D06963BC25D3186600D0FBF1 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D06963E925D3220100D0FBF1 /* DI */,
+				D06963DC25D321A300D0FBF1 /* Supporting Files */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		D06963BE25D3187D00D0FBF1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D0EA8B3825CA09C7003AB18F /* SocketService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D06963CD25D319B800D0FBF1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D06963CE25D319C500D0FBF1 /* AnyPublisher+Extensions.swift */,
+				D07AF91625D3423100CA46CB /* View+DismissKeyboard.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D06963D425D31A0A00D0FBF1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D06963D525D31A1600D0FBF1 /* ViewError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D06963DC25D321A300D0FBF1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0EA8B2725C9EC79003AB18F /* Info.plist */,
+				D0EA8B1E25C9EC75003AB18F /* wolfApp.swift */,
+				D0EA8B2225C9EC79003AB18F /* Assets.xcassets */,
+				D0EA8B2425C9EC79003AB18F /* Preview Content */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D06963E925D3220100D0FBF1 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				D06963EE25D3227500D0FBF1 /* ViewProvider.swift */,
+				D06963F125D3229100D0FBF1 /* HelperAssembly.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		D06963F925D3236800D0FBF1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D06963FA25D3238200D0FBF1 /* #Navigation */,
+				D0EA8B2E25C9EC9A003AB18F /* HomeViewModel.swift */,
+				D0EA8B2025C9EC75003AB18F /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D06963FA25D3238200D0FBF1 /* #Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				D06963FB25D323A300D0FBF1 /* HomeAssembly.swift */,
+				D06963FE25D3247E00D0FBF1 /* ViewProvider+Home.swift */,
+			);
+			path = "#Navigation";
+			sourceTree = "<group>";
+		};
+		D07AF90325D3408500CA46CB /* JoinParty */ = {
+			isa = PBXGroup;
+			children = (
+				D07AF90A25D340A300CA46CB /* #Navigation */,
+				D07AF90725D340A000CA46CB /* JoinPartyViewModel.swift */,
+				D07AF91325D3410E00CA46CB /* JoinPartyView.swift */,
+			);
+			path = JoinParty;
+			sourceTree = "<group>";
+		};
+		D07AF90A25D340A300CA46CB /* #Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				D07AF90B25D340B800CA46CB /* JoinPartyAssembly.swift */,
+				D07AF90F25D340DB00CA46CB /* ViewProvider+JoinParty.swift */,
+			);
+			path = "#Navigation";
+			sourceTree = "<group>";
+		};
 		D0EA8B1225C9EC75003AB18F = {
 			isa = PBXGroup;
 			children = (
@@ -52,11 +275,11 @@
 		D0EA8B1D25C9EC75003AB18F /* wolf-app */ = {
 			isa = PBXGroup;
 			children = (
-				D0EA8B1E25C9EC75003AB18F /* wolf_appApp.swift */,
-				D0EA8B2025C9EC75003AB18F /* ContentView.swift */,
-				D0EA8B2225C9EC79003AB18F /* Assets.xcassets */,
-				D0EA8B2725C9EC79003AB18F /* Info.plist */,
-				D0EA8B2425C9EC79003AB18F /* Preview Content */,
+				D06963BC25D3186600D0FBF1 /* Application */,
+				D05B15C125D3141C001BA8F3 /* Additions */,
+				D05B15B825D312D7001BA8F3 /* Models */,
+				D05B15C625D31624001BA8F3 /* Epics */,
+				D06963BE25D3187D00D0FBF1 /* Services */,
 			);
 			path = "wolf-app";
 			sourceTree = "<group>";
@@ -85,6 +308,11 @@
 			dependencies = (
 			);
 			name = "wolf-app";
+			packageProductDependencies = (
+				D0EA8B3225C9ED42003AB18F /* SocketIO */,
+				D06963EB25D3224300D0FBF1 /* Swinject */,
+				D06963F525D322C900D0FBF1 /* SwinjectAutoregistration */,
+			);
 			productName = "wolf-app";
 			productReference = D0EA8B1B25C9EC75003AB18F /* wolf-app.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +340,11 @@
 				Base,
 			);
 			mainGroup = D0EA8B1225C9EC75003AB18F;
+			packageReferences = (
+				D0EA8B3125C9ED42003AB18F /* XCRemoteSwiftPackageReference "socket" */,
+				D06963EA25D3224300D0FBF1 /* XCRemoteSwiftPackageReference "Swinject" */,
+				D06963F425D322C900D0FBF1 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
+			);
 			productRefGroup = D0EA8B1C25C9EC75003AB18F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +371,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0EA8B2125C9EC75003AB18F /* ContentView.swift in Sources */,
-				D0EA8B1F25C9EC75003AB18F /* wolf_appApp.swift in Sources */,
+				D06963CB25D319A000D0FBF1 /* WebService.swift in Sources */,
+				D05B15C425D3144A001BA8F3 /* SocketParameter.swift in Sources */,
+				D06963FC25D323A300D0FBF1 /* HomeAssembly.swift in Sources */,
+				D0EA8B2F25C9EC9A003AB18F /* HomeViewModel.swift in Sources */,
+				D0EA8B3925CA09C7003AB18F /* SocketService.swift in Sources */,
+				D06963FF25D3247E00D0FBF1 /* ViewProvider+Home.swift in Sources */,
+				D0212E8725D346BB006528D5 /* PartyViewModel.swift in Sources */,
+				D0212E9825D34DFD006528D5 /* PartyData.swift in Sources */,
+				D0212E9525D34CF6006528D5 /* PartyIdParameter.swift in Sources */,
+				D0212E9125D346FB006528D5 /* ViewProvider+Party.swift in Sources */,
+				D0EA8B2125C9EC75003AB18F /* HomeView.swift in Sources */,
+				D06963CF25D319C500D0FBF1 /* AnyPublisher+Extensions.swift in Sources */,
+				D07AF90C25D340B900CA46CB /* JoinPartyAssembly.swift in Sources */,
+				D06963D225D319E000D0FBF1 /* AnyEncodable.swift in Sources */,
+				D06963D625D31A1600D0FBF1 /* ViewError.swift in Sources */,
+				D0EA8B1F25C9EC75003AB18F /* wolfApp.swift in Sources */,
+				D06963D925D31BA100D0FBF1 /* CreatePartyParameter.swift in Sources */,
+				D06963C825D3198700D0FBF1 /* Weakable.swift in Sources */,
+				D06963EF25D3227500D0FBF1 /* ViewProvider.swift in Sources */,
+				D05B15BB25D312EF001BA8F3 /* JoinPartyParameter.swift in Sources */,
+				D07AF91025D340DB00CA46CB /* ViewProvider+JoinParty.swift in Sources */,
+				D0212E8E25D346EC006528D5 /* PartyAssembly.swift in Sources */,
+				D07AF91425D3410E00CA46CB /* JoinPartyView.swift in Sources */,
+				D07AF90825D340A000CA46CB /* JoinPartyViewModel.swift in Sources */,
+				D06963C525D3195A00D0FBF1 /* ViewModel.swift in Sources */,
+				D069640325D32CE100D0FBF1 /* PartyIdData.swift in Sources */,
+				D0212E8B25D346CE006528D5 /* PartyView.swift in Sources */,
+				D07AF91725D3423100CA46CB /* View+DismissKeyboard.swift in Sources */,
+				D06963F225D3229100D0FBF1 /* HelperAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,16 +528,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"wolf-app/Preview Content\"";
-				DEVELOPMENT_TEAM = S4J5D3N22R;
+				DEVELOPMENT_ASSET_PATHS = "\"wolf-app/Application/Supporting Files/Preview Content\"";
+				DEVELOPMENT_TEAM = 94FLWD5X32;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "wolf-app/Info.plist";
+				INFOPLIST_FILE = "wolf-app/Application/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.maxencemottard.wolf-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ynov.maxence.wolf-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -290,16 +550,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"wolf-app/Preview Content\"";
-				DEVELOPMENT_TEAM = S4J5D3N22R;
+				DEVELOPMENT_ASSET_PATHS = "\"wolf-app/Application/Supporting Files/Preview Content\"";
+				DEVELOPMENT_TEAM = 94FLWD5X32;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "wolf-app/Info.plist";
+				INFOPLIST_FILE = "wolf-app/Application/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.maxencemottard.wolf-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ynov.maxence.wolf-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -328,6 +588,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D06963EA25D3224300D0FBF1 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.1;
+			};
+		};
+		D06963F425D322C900D0FBF1 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/SwinjectAutoregistration";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.0;
+			};
+		};
+		D0EA8B3125C9ED42003AB18F /* XCRemoteSwiftPackageReference "socket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 16.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D06963EB25D3224300D0FBF1 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D06963EA25D3224300D0FBF1 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		D06963F525D322C900D0FBF1 /* SwinjectAutoregistration */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D06963F425D322C900D0FBF1 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
+			productName = SwinjectAutoregistration;
+		};
+		D0EA8B3225C9ED42003AB18F /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0EA8B3125C9ED42003AB18F /* XCRemoteSwiftPackageReference "socket" */;
+			productName = SocketIO;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D0EA8B1325C9EC75003AB18F /* Project object */;
 }
