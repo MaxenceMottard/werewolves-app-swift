@@ -19,7 +19,7 @@ struct HomeView: View {
                 viewModel.handleCreateParty()
             }.padding()
             .fullScreenCover(isPresented: $viewModel.asJoinParty, content: {
-                ViewProvider.party(id: viewModel.partyId!)
+                ViewProvider.Party.home(id: viewModel.partyId!)
             })
             Button(L10n.Home.Button.joinParty) {
                 viewModel.handleJoinParty()

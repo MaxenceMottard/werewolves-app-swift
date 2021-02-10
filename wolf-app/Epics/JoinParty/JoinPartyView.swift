@@ -19,7 +19,7 @@ struct JoinPartyView: View {
             }
             .padding()
             .fullScreenCover(isPresented: $viewModel.asJoinParty, content: {
-                ViewProvider.party(id: viewModel.partyId!)
+                ViewProvider.Party.home(id: viewModel.partyId!)
             })
         }
         .onTapGesture {

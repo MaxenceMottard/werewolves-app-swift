@@ -8,16 +8,25 @@
 import Foundation
 import SocketIO
 
-class SocketService {
+class SocketService: Weakable {
     private let url = URL(string: PlistFiles.serverUrl)!
     private let manager: SocketManager
     private let client: SocketIOClient
+    private var socketId: String!
 
     static let shared = SocketService()
 
     init() {
         manager = SocketManager(socketURL: url, config: [.log(false), .reconnects(true)])
         client = manager.defaultSocket
+
+        subscribe(event: .userId, callback: weakify { (strongSelf, data: UserIdData) in
+            strongSelf.socketId = data.userId
+        })
+    }
+
+    func getSocketId() -> String! {
+        return socketId
     }
     
     func connect() {
@@ -69,6 +78,7 @@ class SocketService {
     }
 
     enum SubscribeEvent: String {
+        case userId = "user:id"
         case partyJoined = "party:joined"
         case partyRefused = "party:refused"
         case partyPlayerJoin = "party:player:join"

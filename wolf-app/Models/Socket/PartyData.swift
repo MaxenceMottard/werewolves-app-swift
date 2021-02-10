@@ -16,4 +16,5 @@ struct PartyData: Decodable {
     let id: String
     let players: [Player]
     let host: Player
+    let isStarted: Bool
 }

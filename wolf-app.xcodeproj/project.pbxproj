@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D0212E8725D346BB006528D5 /* PartyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0212E8625D346BB006528D5 /* PartyViewModel.swift */; };
-		D0212E8B25D346CE006528D5 /* PartyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0212E8A25D346CE006528D5 /* PartyView.swift */; };
-		D0212E8E25D346EC006528D5 /* PartyAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0212E8D25D346EC006528D5 /* PartyAssembly.swift */; };
+		D0212E8725D346BB006528D5 /* PartyHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0212E8625D346BB006528D5 /* PartyHomeViewModel.swift */; };
+		D0212E8B25D346CE006528D5 /* PartyHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0212E8A25D346CE006528D5 /* PartyHomeView.swift */; };
+		D0212E8E25D346EC006528D5 /* PartyHomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0212E8D25D346EC006528D5 /* PartyHomeAssembly.swift */; };
 		D0212E9125D346FB006528D5 /* ViewProvider+Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0212E9025D346FB006528D5 /* ViewProvider+Party.swift */; };
 		D0212E9525D34CF6006528D5 /* PartyIdParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0212E9425D34CF6006528D5 /* PartyIdParameter.swift */; };
 		D0212E9825D34DFD006528D5 /* PartyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0212E9725D34DFD006528D5 /* PartyData.swift */; };
@@ -45,12 +45,16 @@
 		D0EA8B2F25C9EC9A003AB18F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA8B2E25C9EC9A003AB18F /* HomeViewModel.swift */; };
 		D0EA8B3325C9ED42003AB18F /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = D0EA8B3225C9ED42003AB18F /* SocketIO */; };
 		D0EA8B3925CA09C7003AB18F /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA8B3825CA09C7003AB18F /* SocketService.swift */; };
+		D0EB5F3F25D3B6F900B072D0 /* UserIdData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EB5F3E25D3B6F900B072D0 /* UserIdData.swift */; };
+		D0EB5F4625D3BAA300B072D0 /* PartyLobbyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EB5F4525D3BAA300B072D0 /* PartyLobbyViewModel.swift */; };
+		D0EB5F4A25D3BAAB00B072D0 /* PartyLobbyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EB5F4925D3BAAB00B072D0 /* PartyLobbyView.swift */; };
+		D0EB5F4D25D3BB7B00B072D0 /* PartyLobbyAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EB5F4C25D3BB7B00B072D0 /* PartyLobbyAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D0212E8625D346BB006528D5 /* PartyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyViewModel.swift; sourceTree = "<group>"; };
-		D0212E8A25D346CE006528D5 /* PartyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyView.swift; sourceTree = "<group>"; };
-		D0212E8D25D346EC006528D5 /* PartyAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyAssembly.swift; sourceTree = "<group>"; };
+		D0212E8625D346BB006528D5 /* PartyHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyHomeViewModel.swift; sourceTree = "<group>"; };
+		D0212E8A25D346CE006528D5 /* PartyHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyHomeView.swift; sourceTree = "<group>"; };
+		D0212E8D25D346EC006528D5 /* PartyHomeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyHomeAssembly.swift; sourceTree = "<group>"; };
 		D0212E9025D346FB006528D5 /* ViewProvider+Party.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewProvider+Party.swift"; sourceTree = "<group>"; };
 		D0212E9425D34CF6006528D5 /* PartyIdParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyIdParameter.swift; sourceTree = "<group>"; };
 		D0212E9725D34DFD006528D5 /* PartyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyData.swift; sourceTree = "<group>"; };
@@ -87,6 +91,10 @@
 		D0EA8B2725C9EC79003AB18F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0EA8B2E25C9EC9A003AB18F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		D0EA8B3825CA09C7003AB18F /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
+		D0EB5F3E25D3B6F900B072D0 /* UserIdData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdData.swift; sourceTree = "<group>"; };
+		D0EB5F4525D3BAA300B072D0 /* PartyLobbyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyLobbyViewModel.swift; sourceTree = "<group>"; };
+		D0EB5F4925D3BAAB00B072D0 /* PartyLobbyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyLobbyView.swift; sourceTree = "<group>"; };
+		D0EB5F4C25D3BB7B00B072D0 /* PartyLobbyAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyLobbyAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				D0212E8125D346A3006528D5 /* #Navigation */,
-				D0212E8625D346BB006528D5 /* PartyViewModel.swift */,
-				D0212E8A25D346CE006528D5 /* PartyView.swift */,
+				D0EB5F5025D3BDE800B072D0 /* Home */,
+				D0EB5F4425D3BA8B00B072D0 /* Lobby */,
 			);
 			path = Party;
 			sourceTree = "<group>";
@@ -116,7 +124,8 @@
 		D0212E8125D346A3006528D5 /* #Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				D0212E8D25D346EC006528D5 /* PartyAssembly.swift */,
+				D0212E8D25D346EC006528D5 /* PartyHomeAssembly.swift */,
+				D0EB5F4C25D3BB7B00B072D0 /* PartyLobbyAssembly.swift */,
 				D0212E9025D346FB006528D5 /* ViewProvider+Party.swift */,
 			);
 			path = "#Navigation";
@@ -155,6 +164,7 @@
 				D069640225D32CE100D0FBF1 /* PartyIdData.swift */,
 				D0212E9425D34CF6006528D5 /* PartyIdParameter.swift */,
 				D0212E9725D34DFD006528D5 /* PartyData.swift */,
+				D0EB5F3E25D3B6F900B072D0 /* UserIdData.swift */,
 			);
 			path = Socket;
 			sourceTree = "<group>";
@@ -251,6 +261,7 @@
 		D06963F925D3236800D0FBF1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D0EB5F4125D3B96100B072D0 /* PartyLobby */,
 				D06963FA25D3238200D0FBF1 /* #Navigation */,
 				D0EA8B2E25C9EC9A003AB18F /* HomeViewModel.swift */,
 				D0EA8B2025C9EC75003AB18F /* HomeView.swift */,
@@ -321,6 +332,31 @@
 				D0EA8B2525C9EC79003AB18F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D0EB5F4125D3B96100B072D0 /* PartyLobby */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PartyLobby;
+			sourceTree = "<group>";
+		};
+		D0EB5F4425D3BA8B00B072D0 /* Lobby */ = {
+			isa = PBXGroup;
+			children = (
+				D0EB5F4525D3BAA300B072D0 /* PartyLobbyViewModel.swift */,
+				D0EB5F4925D3BAAB00B072D0 /* PartyLobbyView.swift */,
+			);
+			path = Lobby;
+			sourceTree = "<group>";
+		};
+		D0EB5F5025D3BDE800B072D0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D0212E8625D346BB006528D5 /* PartyHomeViewModel.swift */,
+				D0212E8A25D346CE006528D5 /* PartyHomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,10 +469,12 @@
 				D0EA8B2F25C9EC9A003AB18F /* HomeViewModel.swift in Sources */,
 				D0EA8B3925CA09C7003AB18F /* SocketService.swift in Sources */,
 				D06963FF25D3247E00D0FBF1 /* ViewProvider+Home.swift in Sources */,
-				D0212E8725D346BB006528D5 /* PartyViewModel.swift in Sources */,
+				D0212E8725D346BB006528D5 /* PartyHomeViewModel.swift in Sources */,
 				D0212E9825D34DFD006528D5 /* PartyData.swift in Sources */,
 				D0212E9525D34CF6006528D5 /* PartyIdParameter.swift in Sources */,
 				D0212E9125D346FB006528D5 /* ViewProvider+Party.swift in Sources */,
+				D0EB5F4625D3BAA300B072D0 /* PartyLobbyViewModel.swift in Sources */,
+				D0EB5F4D25D3BB7B00B072D0 /* PartyLobbyAssembly.swift in Sources */,
 				D0EA8B2125C9EC75003AB18F /* HomeView.swift in Sources */,
 				D06963CF25D319C500D0FBF1 /* AnyPublisher+Extensions.swift in Sources */,
 				D0212E9F25D3AA46006528D5 /* Generated+Plist.swift in Sources */,
@@ -444,18 +482,20 @@
 				D06963D225D319E000D0FBF1 /* AnyEncodable.swift in Sources */,
 				D06963D625D31A1600D0FBF1 /* ViewError.swift in Sources */,
 				D0EA8B1F25C9EC75003AB18F /* wolfApp.swift in Sources */,
+				D0EB5F3F25D3B6F900B072D0 /* UserIdData.swift in Sources */,
 				D06963D925D31BA100D0FBF1 /* CreatePartyParameter.swift in Sources */,
 				D06963C825D3198700D0FBF1 /* Weakable.swift in Sources */,
 				D06963EF25D3227500D0FBF1 /* ViewProvider.swift in Sources */,
+				D0EB5F4A25D3BAAB00B072D0 /* PartyLobbyView.swift in Sources */,
 				D05B15BB25D312EF001BA8F3 /* JoinPartyParameter.swift in Sources */,
 				D0212EC525D3B316006528D5 /* Generated+Strings.swift in Sources */,
 				D07AF91025D340DB00CA46CB /* ViewProvider+JoinParty.swift in Sources */,
-				D0212E8E25D346EC006528D5 /* PartyAssembly.swift in Sources */,
+				D0212E8E25D346EC006528D5 /* PartyHomeAssembly.swift in Sources */,
 				D07AF91425D3410E00CA46CB /* JoinPartyView.swift in Sources */,
 				D07AF90825D340A000CA46CB /* JoinPartyViewModel.swift in Sources */,
 				D06963C525D3195A00D0FBF1 /* ViewModel.swift in Sources */,
 				D069640325D32CE100D0FBF1 /* PartyIdData.swift in Sources */,
-				D0212E8B25D346CE006528D5 /* PartyView.swift in Sources */,
+				D0212E8B25D346CE006528D5 /* PartyHomeView.swift in Sources */,
 				D07AF91725D3423100CA46CB /* View+DismissKeyboard.swift in Sources */,
 				D06963F225D3229100D0FBF1 /* HelperAssembly.swift in Sources */,
 			);

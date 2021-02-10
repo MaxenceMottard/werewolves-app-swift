@@ -15,3 +15,8 @@
 "joinParty.partyCode"      = "Entrer le code de la partie";
 "joinParty.button.joinParty"    = "Rejoindre la partie";
 
+/**    PARTY    */
+
+/**    PARTY LOBBY    */
+"party.lobby.button.startParty" = "Démarrer la partie";
+
