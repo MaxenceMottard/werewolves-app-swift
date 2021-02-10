@@ -18,6 +18,9 @@ class HelperAssembly: Assembly {
         container.register(SocketService.self) { _ -> SocketService in
             SocketService.shared
         }
+        container.register(ViewProvider.self) { _ -> ViewProvider in
+            ViewProvider.shared
+        }
     }
     
     func registerWebServices(_ container: Container) {

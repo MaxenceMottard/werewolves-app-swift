@@ -9,15 +9,18 @@ import Foundation
 import SocketIO
 
 class SocketService: Weakable {
-    private let url = URL(string: PlistFiles.serverUrl)!
+    private let url = URL(string: "\(PlistFiles.serverUrl)/test")!
     private let manager: SocketManager
     private let client: SocketIOClient
-    private var socketId: String!
+    private var socketId: String = ""
+    var isConnected: Bool {
+        return !socketId.isEmpty
+    }
 
     static let shared = SocketService()
 
     init() {
-        manager = SocketManager(socketURL: url, config: [.log(false), .reconnects(true)])
+        manager = SocketManager(socketURL: url, config: [.log(true), .reconnects(true), .path("/socket.io")])
         client = manager.defaultSocket
 
         subscribe(event: .userId, callback: weakify { (strongSelf, data: UserIdData) in

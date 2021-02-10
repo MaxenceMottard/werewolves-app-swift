@@ -11,20 +11,15 @@ import SwiftUI
 class JoinPartyViewModel: ViewModel {
     @Published var partyIdInput: String = ""
     @AppStorage("username") var username: String = ""
-    var asJoinParty = false {
-        didSet {
-            objectWillChange.send()
-        }
-    }
 
     var socketService: SocketService!
     var partyId: String?
 
     func subscribeToEvents() {
-        socketService.subscribe(event: .partyJoined, callback: weakify { (strongSelf, data: PartyIdData) in
-            strongSelf.partyId = data.id
-            strongSelf.asJoinParty = true
-        })
+        socketService.subscribe(event: .partyJoined) { (data: PartyIdData) in
+            ViewProvider.shared.setEntrypoint(.party(partyId: data.id))
+        }
+
         socketService.subscribe(event: .partyRefused, callback: weakify { (strongSelf, data: PartyIdData) in
             print(data)
         })

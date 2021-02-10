@@ -18,15 +18,9 @@ struct HomeView: View {
             Button(L10n.Home.Button.createParty) {
                 viewModel.handleCreateParty()
             }.padding()
-            .fullScreenCover(isPresented: $viewModel.asJoinParty, content: {
-                ViewProvider.Party.home(id: viewModel.partyId!)
-            })
             Button(L10n.Home.Button.joinParty) {
                 viewModel.handleJoinParty()
             }.padding()
-            .sheet(isPresented: $viewModel.joinPartyViewIsShow, content: {
-                ViewProvider.joinParty()
-            })
             Spacer()
         }
         .background(Color.black)

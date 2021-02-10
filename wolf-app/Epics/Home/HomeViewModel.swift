@@ -11,25 +11,13 @@ import SwiftUI
 
 class HomeViewModel: ViewModel {
     @AppStorage("username") var usernameInput: String = ""
-    var asJoinParty = false {
-        didSet {
-            objectWillChange.send()
-        }
-    }
-    var joinPartyViewIsShow = false {
-        didSet {
-            objectWillChange.send()
-        }
-    }
 
     var socketService: SocketService!
-    var partyId: String?
 
     func subscribeToEvents() {
-        socketService.subscribe(event: .partyJoined, callback: weakify { (strongSelf, data: PartyIdData) in
-            strongSelf.partyId = data.id
-            strongSelf.asJoinParty = true
-        })
+        socketService.subscribe(event: .partyJoined) { (data: PartyIdData) in
+            ViewProvider.shared.setEntrypoint(.party(partyId: data.id))
+        }
     }
 
     func connectSocket() {
@@ -42,6 +30,6 @@ class HomeViewModel: ViewModel {
     }
 
     func handleJoinParty() {
-        joinPartyViewIsShow = true
+        ViewProvider.shared.setEntrypoint(.joinParty)
     }
 }

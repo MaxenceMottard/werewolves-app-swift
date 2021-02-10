@@ -18,9 +18,6 @@ struct JoinPartyView: View {
                 viewModel.handleJoinParty()
             }
             .padding()
-            .fullScreenCover(isPresented: $viewModel.asJoinParty, content: {
-                ViewProvider.Party.home(id: viewModel.partyId!)
-            })
         }
         .onTapGesture {
             self.hideKeyboard()
