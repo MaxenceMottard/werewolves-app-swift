@@ -7,3 +7,11 @@ plist:
     templateName: runtime-swift5
     output: Generated+Plist.swift
 
+
+
+strings:
+  inputs:
+    - Application/en.lproj
+  outputs:
+    - templateName: structured-swift5
+      output: Generated+Strings.swift

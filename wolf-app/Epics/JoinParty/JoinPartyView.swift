@@ -12,9 +12,9 @@ struct JoinPartyView: View {
     
     var body: some View {
         VStack {
-            TextField("PartyId", text: $viewModel.partyIdInput)
+            TextField(L10n.JoinParty.partyCode, text: $viewModel.partyIdInput)
                 .padding()
-            Button("Join Party") {
+            Button(L10n.JoinParty.Button.joinParty) {
                 viewModel.handleJoinParty()
             }
             .padding()

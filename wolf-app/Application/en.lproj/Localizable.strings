@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  wolf-app
+
+  Created by Maxence Mottard on 10/02/2021.
+  
+*/
+
+/**    HOME    */
+"home.username" = "Enter username";
+"home.button.createParty" = "Create Party";
+"home.button.joinParty" = "Join Party";
+
+/**    JOIN PARTY    */
+"joinParty.partyCode"      = "Enter party code";
+"joinParty.button.joinParty"    = "Join Party";

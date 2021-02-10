@@ -13,15 +13,15 @@ struct HomeView: View {
     var body: some View {
         VStack {
             Spacer()
-            TextField("Username", text: $viewModel.usernameInput)
+            TextField(L10n.Home.username, text: $viewModel.usernameInput)
                 .padding()
-            Button("Create Party") {
+            Button(L10n.Home.Button.createParty) {
                 viewModel.handleCreateParty()
             }.padding()
             .fullScreenCover(isPresented: $viewModel.asJoinParty, content: {
                 ViewProvider.party(id: viewModel.partyId!)
             })
-            Button("Join Party") {
+            Button(L10n.Home.Button.joinParty) {
                 viewModel.handleJoinParty()
             }.padding()
             .sheet(isPresented: $viewModel.joinPartyViewIsShow, content: {
