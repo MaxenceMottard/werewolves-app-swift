@@ -49,7 +49,8 @@ class SocketService: ObservableObject, Weakable {
         switch event {
         case .partyCreate(let params as SocketParameter),
              .partyPlayerNew(let params as SocketParameter),
-             .partyJoin(let params as SocketParameter) :
+             .partyJoin(let params as SocketParameter),
+             .partyLeave(let params as SocketParameter):
             client.emit(event.key, params.dictionary)
         default:
             client.emit(event.key)
@@ -73,6 +74,7 @@ class SocketService: ObservableObject, Weakable {
         case partyCreate(params: CreatePartyParameter)
         case partyJoin(params: JoinPartyParameter)
         case partyPlayerNew(params: PartyIdParameter)
+        case partyLeave(params: PartyIdParameter)
         case roomsList
 
         var key: String {
@@ -85,6 +87,8 @@ class SocketService: ObservableObject, Weakable {
                 return "party:player:new"
             case .roomsList:
                 return "rooms:list"
+            case .partyLeave:
+                return "party:leave"
             }
         }
     }
@@ -93,7 +97,7 @@ class SocketService: ObservableObject, Weakable {
         case userId = "user:id"
         case partyJoined = "party:joined"
         case partyRefused = "party:refused"
-        case partyPlayerJoin = "party:player:join"
+        case partyInfo = "party:info"
         case roomsList = "rooms:list"
         case connect = "connect"
     }

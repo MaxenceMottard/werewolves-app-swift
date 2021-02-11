@@ -6,14 +6,17 @@
   
 */
 
-/**    HOME    */
-"home.username" = "Enter username";
-"home.button.createParty" = "Create Party";
-"home.button.joinParty" = "Join Party";
+/**    COMMON    */
+"common.alertTextField.cancel" = "Cancel";
+"common.alertTextField.submit" = "Submit";
 
-/**    JOIN PARTY    */
-"joinParty.partyCode"      = "Enter party code";
-"joinParty.button.joinParty"    = "Join Party";
+/**    HOME    */
+"home.username"             = "Enter username";
+"home.button.createParty"   = "Create Party";
+"home.button.joinParty"     = "Join Party";
+"home.alert.title"          = "Join Party";
+"home.alert.description"    = "Enter party code";
+"home.alert.placeholder"    = "Party Identifier";
 
 /**    PARTY    */
 
@@ -23,6 +26,6 @@
 
 
 /**    ERROR ALERT    */
-"error.alert.button.cancel" = "Cancel";
-"error.alert.GAME_REFUSED.title" = "Party not found";
-"error.alert.GAME_REFUSED.description" = "The party you were looking for cannot be found. Please try again";
+"error.alert.button.cancel"             = "Cancel";
+"error.alert.PARTY_REFUSED.title"       = "Party not found";
+"error.alert.PARTY_REFUSED.description" = "The party you were looking for cannot be found. Please try again";

@@ -6,14 +6,17 @@
   
 */
 
+/**    COMMON    */
+"common.alertTextField.cancel" = "Fermer";
+"common.alertTextField.submit" = "Valider";
+
 /**    HOME    */
-"home.username"       = "Entrez votre pseudo";
+"home.username"             = "Entrez votre pseudo";
 "home.button.createParty"   = "Créer une partie";
 "home.button.joinParty"     = "Rejoindre une partie";
-
-/**    JOIN PARTY    */
-"joinParty.partyCode"      = "Entrer le code de la partie";
-"joinParty.button.joinParty"    = "Rejoindre la partie";
+"home.alert.title"          = "Rejoindre une partie";
+"home.alert.description"    = "Entrer le code de la partie";
+"home.alert.placeholder"    = "Identifiant de la partie";
 
 /**    PARTY    */
 
@@ -23,7 +26,7 @@
 
 
 /**    ERROR ALERT    */
-"error.alert.button.cancel" = "Cancel";
-"error.alert.GAME_REFUSED.title" = "Partie introuvable";
-"error.alert.GAME_REFUSED.description" = "La partie que vous avez recherchée est introuvable. Veuillez réessayer.";
+"error.alert.button.cancel"             = "Cancel";
+"error.alert.PARTY_REFUSED.title"       = "Partie introuvable";
+"error.alert.PARTY_REFUSED.description" = "La partie que vous avez recherchée est introuvable. Veuillez réessayer.";
 

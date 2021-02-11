@@ -21,6 +21,18 @@ struct HomeView: View {
             Button(L10n.Home.Button.joinParty) {
                 viewModel.handleJoinParty()
             }.padding()
+            .background(
+                AlertTextField(
+                    isPresented: $viewModel.joinPartyAlterIsOpen,
+                    title: L10n.Home.Alert.title,
+                    description: L10n.Home.Alert.description,
+                    placeholder: L10n.Home.Alert.placeholder,
+                    keyboardType:  .default,
+                    actionHandler: viewModel.handleJoinParty(partyId:),
+                    cancelHandler: nil,
+                    formatText: viewModel.formatAlertTextField(text:)
+                )
+            )
             Spacer()
         }
         .background(Color.black)

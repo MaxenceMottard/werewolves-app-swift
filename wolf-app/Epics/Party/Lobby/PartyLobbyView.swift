@@ -12,7 +12,23 @@ struct PartyLobbyView: View {
 
     var body: some View {
         VStack {
-            Text("Not Started")
+            HStack {
+                Button(action: {
+                    viewModel.handleLeaveParty()
+                }, label: {
+                    Image(systemName: "xmark")
+                })
+                Spacer()
+                Text("#\(viewModel.party.id)")
+                Spacer()
+                Button(action: {
+                    viewModel.hasToShare = true
+                }, label: {
+                    Image(systemName: "square.and.arrow.up")
+                })
+            }.padding()
+            
+            Spacer()
             
             VStack {
                 ForEach(viewModel.party.players, id: \.id) { player in
@@ -23,12 +39,17 @@ struct PartyLobbyView: View {
             .padding()
             .background(Color.gray)
             
+            Spacer()
+            
             if viewModel.isHost {
                 Button(L10n.Party.Lobby.Button.startParty) {
                     viewModel.handleStartParty()
                 }.padding()
             }
-        }
+        }.sheet(isPresented: $viewModel.hasToShare, content: {
+            let url = URL(string: "\(PlistFiles.serverUrl)/party/\(viewModel.party.id)")
+            ShareSheet(activityItems: [url])
+        })
     }
 }
 

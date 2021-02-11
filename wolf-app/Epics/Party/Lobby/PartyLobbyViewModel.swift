@@ -9,14 +9,19 @@ class PartyLobbyViewModel: ViewModel {
     var socketService: SocketService!
     var party: PartyData!
     var isHost: Bool!
-
-    func subscribeToEvents() {
-        socketService.subscribe(event: .partyPlayerJoin, callback: weakify { (strongSelf, data: PartyData) in
-//            strongSelf.party = data
-        })
+    var hasToShare: Bool = false {
+        didSet {
+            objectWillChange.send()
+        }
     }
 
     func handleStartParty() {
 //        socketService.emit
+    }
+
+    func handleLeaveParty() {
+        let params = PartyIdParameter(id: party.id)
+        socketService.emit(event: .partyLeave(params: params))
+        ViewProvider.shared.setEntrypoint(.home)
     }
 }

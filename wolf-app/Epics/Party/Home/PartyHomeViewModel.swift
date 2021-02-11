@@ -22,13 +22,13 @@ class PartyHomeViewModel: ViewModel {
     }
 
     func subscribeToEvents() {
-        socketService.subscribe(event: .partyPlayerJoin, callback: weakify { (strongSelf, data: PartyData) in
+        socketService.subscribe(event: .partyInfo, callback: weakify { (strongSelf, data: PartyData) in
             strongSelf.isHost = (data.host.id == strongSelf.socketService.getSocketId())
             strongSelf.party = data
         })
 
         socketService.subscribe(event: .partyRefused, callback: weakify { (strongSelf, _: PartyIdData) in
-            strongSelf.handleError(error: ViewError(errorCode: "GAME_REFUSED"))
+            strongSelf.handleError(error: ViewError(errorCode: .PARTY_REFUSED))
             ViewProvider.shared.setEntrypoint(.home)
         })
     }

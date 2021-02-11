@@ -25,8 +25,6 @@ struct wolfApp: App {
                         switch viewProvider.entrypoint {
                         case .party(let partyId):
                             ViewProvider.Party.home(id: partyId)
-                        case .joinParty:
-                            ViewProvider.joinParty()
                         default:
                             ViewProvider.home()
                         }
