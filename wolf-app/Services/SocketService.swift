@@ -9,7 +9,7 @@ import SwiftUI
 import SocketIO
 
 class SocketService: ObservableObject, Weakable {
-    private let url = URL(string: PlistFiles.serverUrl)!
+    private let url = URL(string: PlistFiles.serverUrlLocal)!
     private let manager: SocketManager
     private let client: SocketIOClient
     private var socketId: String? {
@@ -18,7 +18,7 @@ class SocketService: ObservableObject, Weakable {
         }
     }
     var isConnected: Bool {
-        client.status.active
+        !(socketId?.isEmpty ?? true)
     }
 
     static let shared = SocketService()
@@ -41,14 +41,13 @@ class SocketService: ObservableObject, Weakable {
     }
     
     func disconnect() {
-        socketId = nil
         client.disconnect()
+        socketId = nil
     }
     
     func emit(event: EmitEvent) {
         switch event {
         case .partyCreate(let params as SocketParameter),
-             .partyPlayerNew(let params as SocketParameter),
              .partyJoin(let params as SocketParameter),
              .partyLeave(let params as SocketParameter):
             client.emit(event.key, params.dictionary)
@@ -73,7 +72,6 @@ class SocketService: ObservableObject, Weakable {
     enum EmitEvent {
         case partyCreate(params: CreatePartyParameter)
         case partyJoin(params: JoinPartyParameter)
-        case partyPlayerNew(params: PartyIdParameter)
         case partyLeave(params: PartyIdParameter)
         case roomsList
 
@@ -83,8 +81,6 @@ class SocketService: ObservableObject, Weakable {
                 return "party:create"
             case .partyJoin:
                 return "party:join"
-            case .partyPlayerNew:
-                return "party:player:new"
             case .roomsList:
                 return "rooms:list"
             case .partyLeave:

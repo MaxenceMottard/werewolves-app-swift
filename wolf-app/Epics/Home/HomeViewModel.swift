@@ -35,8 +35,7 @@ class HomeViewModel: ViewModel {
     }
 
     func handleJoinParty(partyId: String) {
-        let params = JoinPartyParameter(id: String(partyId.dropFirst(1)), username: usernameInput)
-        socketService.emit(event: .partyJoin(params: params))
+        ViewProvider.shared.setEntrypoint(.party(partyId: String(partyId.dropFirst(1))))
     }
 
     func handleJoinParty() {

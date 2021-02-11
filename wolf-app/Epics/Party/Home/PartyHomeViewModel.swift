@@ -5,7 +5,11 @@
 //  Created by Maxence Mottard on 09/02/2021.
 //
 
+import SwiftUI
+
 class PartyHomeViewModel: ViewModel {
+    @AppStorage("username") var username: String = ""
+
     var socketService: SocketService!
     var partyId: String!
     var party: PartyData? {
@@ -17,8 +21,8 @@ class PartyHomeViewModel: ViewModel {
     var isHost: Bool = false
 
     func sendNewPlayerEvent() {
-        let params = PartyIdParameter(id: partyId)
-        socketService.emit(event: .partyPlayerNew(params: params))
+        let params = JoinPartyParameter(id: partyId, username: username)
+        socketService.emit(event: .partyJoin(params: params))
     }
 
     func subscribeToEvents() {

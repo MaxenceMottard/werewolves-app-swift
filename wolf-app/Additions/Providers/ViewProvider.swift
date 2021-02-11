@@ -28,7 +28,6 @@ class ViewProvider: ObservableObject {
     
     enum Entrypoint {
         case party(partyId: String),
-             home,
-             joinParty
+             home
     }
 }
