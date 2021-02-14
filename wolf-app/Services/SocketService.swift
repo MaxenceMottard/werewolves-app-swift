@@ -9,7 +9,7 @@ import SwiftUI
 import SocketIO
 
 class SocketService: ObservableObject, Weakable {
-    private let url = URL(string: PlistFiles.serverUrlLocal)!
+    private let url = URL(string: PlistFiles.serverUrl)!
     private let manager: SocketManager
     private let client: SocketIOClient
     private var socketId: String? {
