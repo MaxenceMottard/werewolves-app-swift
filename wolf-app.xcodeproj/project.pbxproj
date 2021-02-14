@@ -30,10 +30,10 @@
 		D06963D225D319E000D0FBF1 /* AnyEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06963D125D319E000D0FBF1 /* AnyEncodable.swift */; };
 		D06963D625D31A1600D0FBF1 /* ViewError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06963D525D31A1600D0FBF1 /* ViewError.swift */; };
 		D06963D925D31BA100D0FBF1 /* CreatePartyParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06963D825D31BA100D0FBF1 /* CreatePartyParameter.swift */; };
-		D06963EC25D3224300D0FBF1 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D06963EB25D3224300D0FBF1 /* Swinject */; };
+		D06963EC25D3224300D0FBF1 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = D06963EB25D3224300D0FBF1 /* SwiftPackageProductDependency */; };
 		D06963EF25D3227500D0FBF1 /* ViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06963EE25D3227500D0FBF1 /* ViewProvider.swift */; };
 		D06963F225D3229100D0FBF1 /* HelperAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06963F125D3229100D0FBF1 /* HelperAssembly.swift */; };
-		D06963F625D322C900D0FBF1 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = D06963F525D322C900D0FBF1 /* SwinjectAutoregistration */; };
+		D06963F625D322C900D0FBF1 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = D06963F525D322C900D0FBF1 /* SwiftPackageProductDependency */; };
 		D06963FC25D323A300D0FBF1 /* HomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06963FB25D323A300D0FBF1 /* HomeAssembly.swift */; };
 		D06963FF25D3247E00D0FBF1 /* ViewProvider+Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06963FE25D3247E00D0FBF1 /* ViewProvider+Home.swift */; };
 		D069640325D32CE100D0FBF1 /* PartyIdData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D069640225D32CE100D0FBF1 /* PartyIdData.swift */; };
@@ -43,7 +43,7 @@
 		D0EA8B2325C9EC79003AB18F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0EA8B2225C9EC79003AB18F /* Assets.xcassets */; };
 		D0EA8B2625C9EC79003AB18F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0EA8B2525C9EC79003AB18F /* Preview Assets.xcassets */; };
 		D0EA8B2F25C9EC9A003AB18F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA8B2E25C9EC9A003AB18F /* HomeViewModel.swift */; };
-		D0EA8B3325C9ED42003AB18F /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = D0EA8B3225C9ED42003AB18F /* SocketIO */; };
+		D0EA8B3325C9ED42003AB18F /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = D0EA8B3225C9ED42003AB18F /* SwiftPackageProductDependency */; };
 		D0EA8B3925CA09C7003AB18F /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA8B3825CA09C7003AB18F /* SocketService.swift */; };
 		D0EB5F3F25D3B6F900B072D0 /* UserIdData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EB5F3E25D3B6F900B072D0 /* UserIdData.swift */; };
 		D0EB5F4625D3BAA300B072D0 /* PartyLobbyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EB5F4525D3BAA300B072D0 /* PartyLobbyViewModel.swift */; };
@@ -103,9 +103,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0EA8B3325C9ED42003AB18F /* SocketIO in Frameworks */,
-				D06963EC25D3224300D0FBF1 /* Swinject in Frameworks */,
-				D06963F625D322C900D0FBF1 /* SwinjectAutoregistration in Frameworks */,
+				D0EA8B3325C9ED42003AB18F /* BuildFile in Frameworks */,
+				D06963EC25D3224300D0FBF1 /* BuildFile in Frameworks */,
+				D06963F625D322C900D0FBF1 /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,9 +371,9 @@
 			);
 			name = "wolf-app";
 			packageProductDependencies = (
-				D0EA8B3225C9ED42003AB18F /* SocketIO */,
-				D06963EB25D3224300D0FBF1 /* Swinject */,
-				D06963F525D322C900D0FBF1 /* SwinjectAutoregistration */,
+				D0EA8B3225C9ED42003AB18F /* SwiftPackageProductDependency */,
+				D06963EB25D3224300D0FBF1 /* SwiftPackageProductDependency */,
+				D06963F525D322C900D0FBF1 /* SwiftPackageProductDependency */,
 			);
 			productName = "wolf-app";
 			productReference = D0EA8B1B25C9EC75003AB18F /* wolf-app.app */;
@@ -404,9 +404,9 @@
 			);
 			mainGroup = D0EA8B1225C9EC75003AB18F;
 			packageReferences = (
-				D0EA8B3125C9ED42003AB18F /* XCRemoteSwiftPackageReference "socket" */,
-				D06963EA25D3224300D0FBF1 /* XCRemoteSwiftPackageReference "Swinject" */,
-				D06963F425D322C900D0FBF1 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
+				D0EA8B3125C9ED42003AB18F /* RemoteSwiftPackageReference */,
+				D06963EA25D3224300D0FBF1 /* RemoteSwiftPackageReference */,
+				D06963F425D322C900D0FBF1 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = D0EA8B1C25C9EC75003AB18F /* Products */;
 			projectDirPath = "";
@@ -634,7 +634,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "wolf-app/Application/Supporting Files/wolf-app.entitlements";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"wolf-app/Application/Supporting Files/Preview Content\"";
 				DEVELOPMENT_TEAM = 94FLWD5X32;
 				ENABLE_PREVIEWS = YES;
@@ -644,8 +645,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ynov.maxence.wolf-app";
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxencemottard.wolfy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.maxencemottard.wolfy";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -657,7 +659,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "wolf-app/Application/Supporting Files/wolf-app.entitlements";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"wolf-app/Application/Supporting Files/Preview Content\"";
 				DEVELOPMENT_TEAM = 94FLWD5X32;
 				ENABLE_PREVIEWS = YES;
@@ -667,8 +670,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ynov.maxence.wolf-app";
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxencemottard.wolfy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.maxencemottard.wolfy";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -698,7 +702,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D06963EA25D3224300D0FBF1 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+		D06963EA25D3224300D0FBF1 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject.git";
 			requirement = {
@@ -706,7 +710,7 @@
 				minimumVersion = 2.7.1;
 			};
 		};
-		D06963F425D322C900D0FBF1 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */ = {
+		D06963F425D322C900D0FBF1 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/SwinjectAutoregistration";
 			requirement = {
@@ -714,7 +718,7 @@
 				minimumVersion = 2.7.0;
 			};
 		};
-		D0EA8B3125C9ED42003AB18F /* XCRemoteSwiftPackageReference "socket" */ = {
+		D0EA8B3125C9ED42003AB18F /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
 			requirement = {
@@ -725,19 +729,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D06963EB25D3224300D0FBF1 /* Swinject */ = {
+		D06963EB25D3224300D0FBF1 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D06963EA25D3224300D0FBF1 /* XCRemoteSwiftPackageReference "Swinject" */;
+			package = D06963EA25D3224300D0FBF1 /* RemoteSwiftPackageReference */;
 			productName = Swinject;
 		};
-		D06963F525D322C900D0FBF1 /* SwinjectAutoregistration */ = {
+		D06963F525D322C900D0FBF1 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D06963F425D322C900D0FBF1 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
+			package = D06963F425D322C900D0FBF1 /* RemoteSwiftPackageReference */;
 			productName = SwinjectAutoregistration;
 		};
-		D0EA8B3225C9ED42003AB18F /* SocketIO */ = {
+		D0EA8B3225C9ED42003AB18F /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D0EA8B3125C9ED42003AB18F /* XCRemoteSwiftPackageReference "socket" */;
+			package = D0EA8B3125C9ED42003AB18F /* RemoteSwiftPackageReference */;
 			productName = SocketIO;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -1,0 +1,23 @@
+name: main
+ 
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - '**.md'
+ 
+jobs:
+  build:
+    runs-on: macOS-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-ruby@v1
+      with:
+        ruby-version: '3.0.6'
+    - name: Install fastlane
+      run: |
+        bundle install
+        fastlane install_plugins
+    - name: Run Fastlane lane
+      run: fastlane ios prod
